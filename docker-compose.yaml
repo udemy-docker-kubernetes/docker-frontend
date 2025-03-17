@@ -1,20 +1,7 @@
----
 services:
   frontend:
     build:
       context: .
-      dockerfile: dockerfile.dev
+      dockerfile: dockerfile
     ports:
-     - "3000:5173"
-    volumes:
-      - /app/node_modules
-      - .:/app
-  
-  tests:
-    build:
-      context: .
-      dockerfile: dockerfile.dev
-    volumes:
-      - /app/node_modules
-      - .:/app
-    command: ["npm", "run", "test:unit"]
+      - "80:80"
