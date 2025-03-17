@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build dev image
-        run: docker build -t cuevasgpablo/frontend_tests -f dockerfile.dev
+        run: docker build -t cuevasgpablo/frontend_tests -f dockerfile.dev .
 
       - name: Run tests
         run: docker run -e -CI=true cuevasgpablo/frontend_tests npm coverage
