@@ -15,4 +15,4 @@ jobs:
         run: docker build -t cuevasgpablo/frontend_tests -f dockerfile.dev .
 
       - name: Run tests
-        run: docker run -e -CI=true cuevasgpablo/frontend_tests npm coverage
+        run: docker run -e -CI=true cuevasgpablo/frontend_tests npm run test:coverage
